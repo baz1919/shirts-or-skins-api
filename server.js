@@ -11,6 +11,8 @@ import { ApolloServer } from "@apollo/server";
 import { expressMiddleware } from "@apollo/server/express4";
 import { useServer as useWsServer } from "graphql-ws/lib/use/ws";
 
+import { resolvers } from "./graphql/resolvers/index.js"
+
 const PORT = 9000;
 const JWT_SECRET = Buffer.from("672b4d1d434b1bc0bad6a33c081a83fbf8d67580ea302344e3d4414eb806eeae", "base64");
 const GQL_ROUTE = "/graphql";
@@ -57,9 +59,6 @@ const getWsContext = ({ connectionParams }) => {
 // Protocol Servers
 const httpServer = createHttpServer(app);
 const wsServer = new WebSocketServer({ server: httpServer, path: GQL_ROUTE });
-
-// TO REPLACE
-const resolvers = {};
 
 // Schema Setup
 const typeDefs = await readFile("./graphql/schema/schema.graphql", "utf-8");
