@@ -31,17 +31,17 @@ app.use(
 );
 // Routes
 app.post("/login", async (req, res) => {
-    const {userId, password} = req.body;
-    const user = await User.findOne((user) => user.id === userId);
+    const { userId, password } = req.body;
+    const user = await User.findOne((user) => user.username === userId);
     if (user && user.password === password) {
-        const token = jwt.sign({ sub: user.id }, JWT_SECRET);
+        const token = jwt.sign({ sub: user.username }, JWT_SECRET);
         res.json({ token });
     } else {
         res.sendStatus(401);
     }
 });
 
-app.get("login", async (req, res) => {
+app.get("login", async (_req, res) => {
     res.sendStatus(405);
 })
 

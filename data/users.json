@@ -1,6 +1,14 @@
 [
     {
-        "id": "tom",
-        "password": "jukes123"
+        "id": 1,
+        "username": "tom",
+        "password": "jukes123",
+        "displayName": "Jukes"
+    },
+    {
+        "id": 2,
+        "username": "test",
+        "password": "test123",
+        "displayName": "Messi"
     }
 ]

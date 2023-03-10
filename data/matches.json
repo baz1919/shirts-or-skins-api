@@ -1,8 +1,12 @@
 [
     {
         "id": 1,
-        "team1": "Shirts",
-        "team2": "Skins",
-        "date": "2023-03-17T12:00:00.000Z"
+        "date": "2023-03-17T12:00:00.000Z",
+        "players": {
+            "team1": [1, 2],
+            "team2": [1, 2],
+            "unassigned": [1, 2]
+        },
+        "status": "pending"
     }
 ]
