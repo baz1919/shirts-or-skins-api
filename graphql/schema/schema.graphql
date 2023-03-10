@@ -6,4 +6,5 @@ type Match {
     id: ID!
     team1: String!
     team2: String!
+    date: String!
 }

@@ -1,7 +1,8 @@
 [
     {
         "id": 1,
-        "team1": "test team 1",
-        "team2": "test team 2"
+        "team1": "Shirts",
+        "team2": "Skins",
+        "date": "2023-03-17T12:00:00.000Z"
     }
 ]
