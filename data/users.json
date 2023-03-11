@@ -7,8 +7,32 @@
     },
     {
         "id": 2,
-        "username": "test",
+        "username": "messi",
         "password": "test123",
         "displayName": "Messi"
+    },
+    {
+        "id": 3,
+        "username": "ronaldo",
+        "password": "test123",
+        "displayName": "Ronaldo"
+    },
+    {
+        "id": 4,
+        "username": "mbappe",
+        "password": "test123",
+        "displayName": "Mbappe"
+    },
+    {
+        "id": 5,
+        "username": "bamford",
+        "password": "test123",
+        "displayName": "Bamford"
+    },
+    {
+        "id": 6,
+        "username": "chris",
+        "password": "test123",
+        "displayName": "Ginge"
     }
 ]

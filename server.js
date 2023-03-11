@@ -78,6 +78,6 @@ app.use(
 
 httpServer.listen({ port: PORT}, () => {
     console.log(`Server running on port ${PORT}`);
-    console.log(`Login endpoint: http://localhost${PORT}${LOGIN_ROUTE}`)
+    console.log(`Login endpoint: http://localhost:${PORT}${LOGIN_ROUTE}`)
     console.log(`GraphQL endpoint: http://localhost:${PORT}${GQL_ROUTE}`);
 });
