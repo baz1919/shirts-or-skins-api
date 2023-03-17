@@ -4,6 +4,11 @@ type Query {
     player(id: ID!): Player
 }
 
+type Mutation {
+    createMatch(matchDate: String!): Match
+    addPlayer(matchId: ID!): Match
+}
+
 type Match {
     id: ID!
     date: String!

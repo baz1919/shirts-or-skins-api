@@ -1,6 +1,6 @@
 // For real world implementation, see recommendations on: https://github.com/apollographql/graphql-subscriptionss
 import { queryResolvers } from "./query.js";
-// import { mutationResolvers } from "./mutation.js";
+import { mutationResolvers } from "./mutations.js";
 // import { subscriptionResolvers } from "./subscription.js";
 import { matchResolvers } from "./match.js"
 
@@ -10,7 +10,7 @@ import { matchResolvers } from "./match.js"
 
 export const resolvers = {
   Query: queryResolvers(),
-//   Mutation: mutationResolvers(pubSub),
+  Mutation: mutationResolvers(),
 //   Subscription: subscriptionResolvers(pubSub),
   Match: matchResolvers(),
 };

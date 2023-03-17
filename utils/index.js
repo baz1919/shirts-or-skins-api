@@ -1,5 +1,5 @@
 export const rejectIf = (condition) => {
-    if (!condition) {
+    if (condition) {
       throw new Error("Unauthorized");
     }
   }

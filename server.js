@@ -53,6 +53,7 @@ const getWsContext = ({ connectionParams }) => {
         const payload = jwt.verify(token, JWT_SECRET);
         return { userId: payload.sub};
     }
+
     return {};
 }
 
@@ -63,7 +64,7 @@ const wsServer = new WebSocketServer({ server: httpServer, path: GQL_ROUTE });
 // Schema Setup
 const typeDefs = await readFile("./graphql/schema/schema.graphql", "utf-8");
 const schema = makeExecutableSchema({typeDefs, resolvers});
-useWsServer({schema, context: getWsContext }, wsServer)
+useWsServer({ schema, context: getWsContext }, wsServer);
 
 // Apollo Server
 const apolloServer = new ApolloServer({
@@ -73,7 +74,7 @@ const apolloServer = new ApolloServer({
 await apolloServer.start();
 app.use(
     GQL_ROUTE,
-    expressMiddleware(apolloServer, {context: getHttpContext})
+    expressMiddleware(apolloServer, { context: getHttpContext })
 );
 
 httpServer.listen({ port: PORT}, () => {
