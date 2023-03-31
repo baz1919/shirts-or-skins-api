@@ -1,28 +1,28 @@
 type Query {
-    matches: [Match]
-    match(id: ID!): Match
-    player(id: ID!): Player
+  matches: [Match]
+  match(id: ID!): Match
+  player(id: ID!): Player
+  myMatches: [Match]
 }
 
 type Mutation {
-    createMatch(matchDate: String!): Match
-    addPlayer(matchId: ID!): Match
+  createMatch(matchDate: String!): Match
+  addPlayer(matchId: ID!): Match
 }
 
 type Match {
-    id: ID!
-    date: String!
-    status: String!
-    players: Players
+  id: ID!
+  date: String!
+  status: String!
+  players: Players
 }
 
 type Players {
-    unassigned: [Player]
-    team1: [Player]
-    team2: [Player]
+  unassigned: [Player]
+  team1: [Player]
+  team2: [Player]
 }
 
 type Player {
-    id: ID
-    displayName: String
+  displayName: String
 }
